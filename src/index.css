@@ -20,70 +20,10 @@ code {
 ul,li,ol{
   list-style: none;
 }
-.box{
-  width: 800px;
-  height: 252px;
-  overflow: hidden;
-  border: 2px solid #000;
-  margin: 30px auto;
-  position: relative;
+.login-form-forgot {
+  float: right;
 }
-.slides{
-  width: 4800px;
-  height: 300px;
-  position: absolute;
-  left:0;
-  transition-duration: 1s;
-}
-/* 子选择器 */
-.slides>li{
-  width:800px;
-  float: left;
-}
-/* 后代选择器 */
-.slides img{
+.login-form-button {
   width: 100%;
 }
 
-.dots{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%);
-}
-.dots>li{
-  width: 20px;
-  height: 20px;
-  margin-right:10px;
-  cursor: pointer;
-  text-align: center;
-  line-height: 20px;
-  float: left;
-  background:#ccc;
-  border-radius: 50%;
-}
-.dots>.active{
-  background: red;
-}
-/* 箭头 */
-.arrow{
-  width:100%;
-  position: absolute;
-  top:45%;
-}
-.arrow li{
-  width: 30px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  font-size: 30px;
-  background: rgba(163, 29, 29, 0.8);
-}
-.arrow-left{
-  margin-left:10px;
-  float: left;
-}
-.arrow-right{
-  margin-right:10px;
-  float: right;
-}
