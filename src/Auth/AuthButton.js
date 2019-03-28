@@ -24,6 +24,7 @@ function AuthButton(props){
         </p>
     )
 }
+
 const AuthButton = withRouter(button);
 
 export default AuthButton;

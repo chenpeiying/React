@@ -7,6 +7,7 @@ import {
   withRouter
 } from "react-router-dom";
 import AuthButton from '../Auth/AuthButton';
+import Login from '../Auth/login'; 
 function AuthExample(){
     return (
         <Router>
@@ -20,8 +21,9 @@ function AuthExample(){
                         <Link to="/protected">Protected Page</Link>
                     </li>
                 </ul>
-                <Route path="/public" component={public} />
-                <Route path="/login" component={login} />
+                <Route path="/public" component={Public} />
+                <Route path="/login" component={Login} />
+                <Route path="/protected" component={Protected} />
             </div>
         </Router>
     )
