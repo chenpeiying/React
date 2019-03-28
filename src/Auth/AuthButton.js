@@ -24,7 +24,10 @@ function AuthButton(props){
         </p>
     )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 27a84e5cb5e22cf4bf0c0c05369cddd3947d1156
 const AuthButton = withRouter(button);
 
 export default AuthButton;
