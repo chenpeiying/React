@@ -1,33 +1,17 @@
-import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
-} from "react-router-dom";
-import fakeAuth from "./fakeAuth";
+import React from 'react';
+import fakeAuth from './fakeAuth';
 import {withRouter} from 'react-router-dom';
-
-function AuthButton(props){
+function Button(props){
     return (
-     
         fakeAuth.isAuthenticated?
         <p>
-            welcome!
+            welcome!!!
             <button onClick={()=>{
-                fakeAuth.signout(props.history.push("/"));
+                fakeAuth.signout(props.history.push('/'));
             }}>退出</button>
         </p>:
-        <p>
-            你进不去了
-        </p>
+        <p>You are not logged in.</p>
     )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 27a84e5cb5e22cf4bf0c0c05369cddd3947d1156
-const AuthButton = withRouter(button);
-
+const AuthButton = withRouter(Button)
 export default AuthButton;

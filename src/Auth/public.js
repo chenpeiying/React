@@ -1,8 +1,5 @@
-
-function Public() {
-    return <h3>Public</h3>;
-  }
-  
-  function Protected() {
-    return <h3>Protected</h3>;
-  }
+import React from 'react';
+function Public(){
+    return <h1>Public</h1>
+}
+export default Public;
