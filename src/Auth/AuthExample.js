@@ -1,17 +1,11 @@
-import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
-} from "react-router-dom";
-import AuthButton from '../Auth/AuthButton';
-<<<<<<< HEAD
-import Login from '../Auth/login'; 
-=======
->>>>>>> 27a84e5cb5e22cf4bf0c0c05369cddd3947d1156
-function AuthExample(){
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, withRouter,Redirect } from 'react-router-dom';
+import AuthButton from './AuthButton';
+import Public from './Public';
+import Login from './Login';
+import Protected from './Protected';
+import fakeAuth from './fakeAuth';
+function AuthExample() {
     return (
         <Router>
             <div>
@@ -24,17 +18,21 @@ function AuthExample(){
                         <Link to="/protected">Protected Page</Link>
                     </li>
                 </ul>
-<<<<<<< HEAD
-                <Route path="/public" component={Public} />
-                <Route path="/login" component={Login} />
-                <Route path="/protected" component={Protected} />
-=======
-                <Route path="/public" component={public} />
-                <Route path="/login" component={login} />
->>>>>>> 27a84e5cb5e22cf4bf0c0c05369cddd3947d1156
+                <Route path="/public" component={Public}/>
+                <Route path="/login" component={Login}/>
+                <PrivateRoute path="/protected" component={Protected} />
             </div>
         </Router>
     )
 }
-
+function PrivateRoute(props){
+    return (
+        <Route path={props.path} render={()=>(
+            fakeAuth.isAuthenticated?
+            <props.component/>:
+            <Redirect to="/login"/> 
+     
+        )}/>
+    )
+}
 export default AuthExample;
